@@ -6,8 +6,11 @@
 // Globals
 // HELPFUL FOR YOUR LAB!!
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
+let storeLocations = [];
 // DOM WINDOWS
+
+// RENDERING
+
 
 
 // HELPER FUNCTIONS / UTILITIES
@@ -67,22 +70,17 @@ let dubai = new Store('dubai', 11, 38, 3.7);
 let paris = new Store('paris', 20, 38, 2.3);
 let lima = new Store('lima', 2, 16, 4.6);
 
-seattle.render()
-tokyo.render()
-dubai.render()
-paris.render()
-lima.render()
 
-// storeLocations.push(seattle, tokyo, dubai, paris, lima);
+storeLocations.push(seattle, tokyo, dubai, paris, lima);
 
-// function renderAll(){
-//     for(let i = 0; i < storeLocations; i++){
-//         storeLocations[i].randomCustomers();
-//         storeLocations[i].randomCookies();
-//         storeLocations[i].render();
-//     }
-// }
-// renderAll()
+function renderAll(){
+    for(let i = 0; i < storeLocations.length; i++){
+        storeLocations[i].randomCustomers();
+        storeLocations[i].randomCookies();
+        storeLocations[i].render();
+    }
+}
+renderAll()
 
 
 // OBJECT LITERALS
