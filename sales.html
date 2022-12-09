@@ -12,26 +12,38 @@
     <table id="SalesTable">
 
     </table>
-    <!-- <h2>Seattle:</h2>
-    <table id="SeattleStats">
+<form id="cookie-form">
+        <fieldset>
+            <legend>Cookie Form</legend>
 
-    </table>
-    <h2>Tokyo:</h2>
-    <table id="TokyoStats">
+            <!-- INPUTS & LABELS - 2 OPTIONS-->
 
-    </table>
-    <h2>Dubai:</h2>
-    <table id="DubaiStats">
+            <!-- OPTION 1: IS TO HAVE MY INPUT AND LABEL AS SIBLINGS 
+            IMPORTANT, I MUST HAVE A "FOR" ATTRIBUTE ON MY LABEL & A "ID" ON MY INPUT - MUST BE THE SAME -->
 
-    </table>
-    <h2>Paris:</h2>
-    <table id="ParisStats">
+            <label for="userName">Name: </label>
+            <input name="userName" type="text" id="userName" placeholder="ex. Marcus Aurelius"></input>
+            <!-- event.target.userName.value -->
 
-    </table>
-    <h2>Lima:</h2>
-    <table id="LimaStats">
-        
-    </table> -->
+            <!-- OPTION 2: NEST MY INPUT IN MY LABEL -->
+            <label>Minimum Customers:
+                <input type="text" name="min"></input>
+                <!-- event.target.age.value -->
+            </label> 
+
+            <label>Maximum Customers:
+                <input type="text" name="max"></input>
+                <!-- event.target.age.value -->
+            </label> 
+
+            <label>Average:
+                <input type="text" name="average"></input>
+                <!-- event.target.age.value -->
+            </label> 
+
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
     <script src="js/app.js"></script>
 </body>
 <footer>

@@ -1,5 +1,65 @@
 'use strict'
 
+
+// TODO STEP: 1 GRAB THE ELEMENT THAT WE WANT TO LISTEN TO
+let cookieForm = document.getElementById('cookie-form');
+
+// TODO STEP:2 ATTACH OUT EVENT LISTENER TO THE ELEMENT - 2 ARGS (EVENT TYPE and THE HANDLER)
+cookieForm.addEventListener('submit', handleSubmit);
+
+// TODO STEP 3: DEFINE OUR EVENT HANDLER - CODE TO RUN ON EVENT
+function handleSubmit(event){
+    event.preventDefault();
+
+    console.dir(event.target);
+
+    let name = event.target.userName.value;
+    console.log(name);
+
+    let min = +event.target.min.value;
+    console.log(min);
+
+    let max = +event.target.max.value;
+    console.log(max);
+
+    let average = +event.target.average.value;
+    console.log(average);
+
+    let newStore = new Store(name, min, max, average);
+    storeLocations.push(newStore);
+
+
+    document.getElementById("SalesTable").deleteRow(-1);
+
+    newStore.randomCustomers();
+    newStore.randomCookies();
+    newStore.render();
+    footer();
+
+    // ! INPUTS RETURN STRING DATA TYPES
+    // console.log(typeof event.target.cookieStore.value);
+
+}
+
+// FOOTER FUNCTION
+function footer(){
+let table = document.getElementById('SalesTable');
+let tr = document.createElement('tr');
+let td = document.createElement('td');
+td.textContent = 'totals'
+tr.appendChild(td);
+for (let i = 0; i < hours.length; i++) {
+    let totalHours = 0;
+    for(let j = 0; j < storeLocations.length; j++){
+        totalHours = totalHours+storeLocations[j].cookiesPerHour[i]
+    }
+    let td = document.createElement('td');
+    td.textContent = totalHours;
+    tr.appendChild(td);
+    
+};
+table.appendChild(tr);
+};
 //Create Objects
 
 
@@ -46,8 +106,6 @@ Store.prototype.randomCookies = function () {
 }
 
 Store.prototype.render = function () {
-    this.randomCustomers();
-    this.randomCookies();
     let table = document.getElementById('SalesTable');
     let tr = document.createElement('tr');
     let td = document.createElement('td');
@@ -81,7 +139,7 @@ function renderAll(){
     }
 }
 renderAll()
-
+footer()
 
 // OBJECT LITERALS
 // **** HELPFUL FOR START OF YOUR LAB *****
