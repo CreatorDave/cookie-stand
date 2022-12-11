@@ -1,3 +1,161 @@
-td {
-    border: 20px;
-}
+  table,
+  th,
+  td {
+      border: 1px solid;
+      width: 100%;
+      color: black;
+      background-color: rgb(255, 255, 255);
+      margin-top: 15px;
+      margin-bottom: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+  }
+
+
+  header {
+      background-color: rgb(235, 191, 35);
+      border-radius: 50px;
+      border: 5px solid black;
+  }
+
+  h1 {
+      text-align: center;
+      color: rgb(216, 126, 8);
+      font-family: 'Source Sans 3', sans-serif;
+
+  }
+
+  header img {
+      width: 200px;
+
+  }
+
+  header ul {
+      display: flex;
+      justify-content: center;
+  }
+
+  header li {
+      width: 190px;
+      display: flex
+  }
+
+  body {
+      background-color: rgb(223, 136, 16);
+  }
+
+  .greeting {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+  }
+
+  #four-images {
+      display: flex;
+      padding-top: 5%;
+      justify-content: space-around
+  }
+
+  #four-images img {
+      display: inline;
+      border: 3px solid black;
+      align-content: center;
+      height: 150px;
+  }
+
+  .pat {
+      flex-direction: column;
+      width: 400px;
+      background-color: white;
+      border: 5px solid black;
+      border-radius: 8px;
+      height: 85%;
+
+  }
+
+  .pat img {
+      display: flex;
+      align-items: center;
+      width: 200px;
+      margin: 15px;
+      width: 94%;
+      border: 3px solid black;
+  }
+
+  .pat p {
+      padding: 20px
+  }
+
+  .merch {
+      flex-direction: column;
+      width: fit-content;
+      border: 5px solid black;
+      border-radius: 10px;
+      text-align: center;
+      align-items: flex-end;
+      background-color: rgb(240, 245, 238);
+      height: 80%;
+
+  }
+
+  .merch img {
+      margin-top: 20px;
+      border: 3px solid black;
+
+  }
+
+  #images {
+      display: flex;
+      padding-top: 5%;
+      justify-content: space-around;
+      height: 550px
+  }
+
+  button {
+      background-color: rgb(205, 62, 62);
+  }
+
+  button:hover {
+      color: white;
+      background-color: rgb(72, 4, 210);
+      transition: 100ms;
+  }
+
+
+  .locations {
+      display: flex;
+      justify-content: center;
+  }
+
+  * p {
+      font-family: Georgia, 'Times New Roman', Times, serif
+  }
+
+
+  #form fieldset {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: fit-content;
+      width: fit-content;
+      margin-left: 150px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: rgb(183, 219, 6);
+  }
+
+  #form button {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+  }
+
+
+  #form button:hover {
+      color: white;
+      background-color: black;
+      transition: 1s;
+  }
